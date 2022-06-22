@@ -1,24 +1,24 @@
 import { TouchableOpacity, StyleSheet, Text, View, KeyboardAvoidingView, TextInput } from 'react-native';
-import { useState, useRef } from 'react'
-import { auth } from '../firebase';
+import { useState } from 'react'
+// import { auth } from '../firebase';
 
 function LogsScreen () {
     const [email, setEmail]= useState('')
     const [password, setPassword]= useState('')
     
     const handleSignUp = () => {
-        auth
-        .createUserWithEmailAndPassword(email, password)
-        .then(userCredentials => {
-            const user = userCredentials.user;
-            console.log(user.email)
-        }).catch(error => {
-            alert(error.message)
-            console.log(error)
-        })
+    //     // auth
+    //     .createUserWithEmailAndPassword(email, password)
+    //     .then(userCredentials => {
+    //         const user = userCredentials.user;
+    //         console.log(user.email)
+    //     }).catch(error => {
+    //         alert(error.message)
+    //         console.log(error)
+    //     })
     }
     return (
-        <KeyboardAvoidingView>
+        <KeyboardAvoidingView style={styles.container}>
             <Text>Logs Screen</Text>
 
             <View>
@@ -44,7 +44,9 @@ function LogsScreen () {
 
 const styles = StyleSheet.create({
     container: {
-
+        flex: 1,
+        padding: 36,
+        marginTop: 20,
     },
 
     button: {

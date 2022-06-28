@@ -8,7 +8,7 @@ function HomeScreen (props) {
             <Text>Open up App.js to start working on ur journal!</Text>
             <StatusBar style="auto" />
             <TouchableOpacity onPress={()=> navigation.navigate('Logs')}>
-                <Text>Go to logs</Text>
+                <Text>Go to logs or something</Text>
             </TouchableOpacity>
         </View>
     )
